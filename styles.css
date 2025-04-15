@@ -44,14 +44,6 @@
     margin-top: 4vh;
 }
 
-.navbar{
-    color: white;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-around;
-}
-
 .logo{
     padding-inline: 3vw;
     color: #e9c46a;
@@ -62,28 +54,42 @@
     font-weight: 400;
     font-style: normal;
     color: #264653;
-    font-size: 2.5vh;
+    font-size: 2vh;
 }
 
 .navigation{
     display: flex;
-    flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
-    min-width: 30vw;
+    color: white;
+    min-width: 35vw;
     height: 5vh;
     background-color: #264653;
     border-radius: 1vh;
+    font-size: 1.2vw;
 }
 
-.option{
+.navigation option{
+    appearance: none;
+    font-size: 1vw;
     color: white;
-    background-color: #264653;
+    background: none;
+    background-color: #264653 !important;
+}
+
+.navigation select{
+    appearance: none;
+    background-color: transparent !important;
+    border: none;
+    font: inherit;
+    font-size: inherit;
+    outline: none;
+    box-shadow: none;
 }
 
 .nav2{
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
     width: 35vw;
@@ -118,15 +124,15 @@
     height: 25vw;
     overflow: hidden;
     border-radius: 1vw;
-    margin-top: 15vh;
+    margin-top: 12vh;
+    object-fit: cover;
     margin-left: 7vw;
 }
 
 .craneImg{
+    display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: block;
     border-radius: 1vw;
     transform: scaleX(-1);
     animation: rotateCI 1s ease 1;
@@ -143,7 +149,7 @@
 
 .content{
     width: 45vw;
-    margin-top: 8vw;
+    margin-top: 5vw;
     margin-left: 4vw;
     font-size: clamp(5vh, 5vw, 8vh);
 }
@@ -159,7 +165,9 @@
     position: relative;
     z-index: 2;
     width: 23vw;
+    height: 5vh;
     margin-top: 5vh;
+    font-size: 1.5vw;
 }
 
 .servicesSection{
@@ -228,6 +236,8 @@
 }
 
 .reviewsCard{
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
     z-index: 2;
     width: 95vw;
@@ -249,12 +259,14 @@
     height: 5vh;
     margin-top: 4vw;
     margin-left: 2vw;
+    font-size: 1.5vw;
     border-radius: 1.5vw;
     box-shadow: inset 0vh 0vw 1vh rgba(0, 0, 0, .3);
 }
 
 .svg{
     position: relative;
+    width: 35vw;
 }
 
 .closureSection{
@@ -456,17 +468,46 @@ i{
 }
 
 @media (max-width: 750px) {
+    .heroSection{
+        height: auto;
+    }
+    .navbar{
+        width: 15vw;
+    }
+    .navigation{
+        width: 65vw;
+    }
+    .navigation, .navigation option, .navigation select{
+        font-size: 2vh;
+    }
+    .cta{
+        width: 15vh;
+        font-size: 1.2vh;
+    }
+    .nav2{
+        width: 15vw;
+    }
     .down{
         min-height: 80vh;
+        flex-direction: row;
+        justify-content: center;
     }
 
     .crane{
-        width: 70vw;
-        height: clamp(20vh, 20vh, 30vh);
+        margin-top: 4%;
+        margin-left: 0;
+        width: 80vw;
+        height: 35vh;
     }
-    
+    .content{
+        display: flex;
+        justify-content: space-evenly;
+        width: 90vw;
+        margin-top: 0;
+    }
     .cta2{
-        font-size: 2vh;
+        font-size: 1.5vh;
+        width: 30vw;
     }
 
     .card{
@@ -488,6 +529,11 @@ i{
     .cImgBox{
         width: 70vw;
         height: 35vh;
+    }
+    .clientHead{
+        width: 30vw;
+        height: 5vh;
+        font-size: 1.5vh;
     }
     input{
         width: 60vw;
