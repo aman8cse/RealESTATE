@@ -355,13 +355,16 @@
 }
 
 .call{
-    height: 70vh;
+    height: auto;
     width: 90vw;
     margin-top: -5vh;
 }
 
 .callContent{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .callImgBox{
@@ -369,8 +372,6 @@
     height: 40vw;
     overflow: hidden;
     border-radius: 1vw;
-    margin-top: 1vh;
-    margin-left: -8vh;
 }
 
 .callImg{
@@ -386,7 +387,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 7vh;
+    margin-top: clamp(0vh, 0vh, 1vh);
 }
 
 input{
@@ -401,12 +402,15 @@ input{
 .callSubmit{
     min-width: 8vw;
     height: 5vh;
+    margin-bottom: clamp(2%, 5%, 8%);
 }
 
 .footerSection{
     display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
     color: #264653;
-    margin: 15vh;
+    margin-top: 15vh;
 }
 
 .fSA{
@@ -483,7 +487,29 @@ i{
     }
     .cImgBox{
         width: 70vw;
-        height: 25vh;
+        height: 35vh;
+    }
+    input{
+        width: 60vw;
+    }
+    .callImgBox{
+        width: auto;
+        height: 30vh;
+        transform: scale(1);
+    }
+    .fSA{
+        width: 90vw;
+        justify-content: space-evenly;
+        border: none;
+    }
+    .fSB{
+        width: 80vw;
+        justify-content: space-evenly;
+        border-top: 1px solid #264653;
+        padding: 2%;
+    }
+    .socials{
+        width: 25vw;
     }
 }
 
