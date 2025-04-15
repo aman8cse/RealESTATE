@@ -22,7 +22,7 @@
 
 .header{
     position: relative;
-    z-index: 2;
+    z-index: 3;
     height: 4vh;
     width: 100vw;
     color: white;
@@ -96,6 +96,10 @@
     height: 5vh;
 }
 
+.nav2 p{
+    font-size: 1vw;
+}
+
 .cta{
     position: relative;
     z-index: 2;
@@ -106,6 +110,7 @@
     height: 4vh;
     color: #264653;
     padding-inline: 3vw;
+    border: 3px solid transparent;
     border-radius: 1vh;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
@@ -180,6 +185,7 @@
 }
 
 .servicesSection p{
+    font-size: 2vw;
     z-index: 2;
 }
 
@@ -277,16 +283,25 @@
 .closureHead{
     display: flex;
     justify-content: center;
-    border-top-right-radius: 1vw;
-    border-bottom-right-radius: 1vw;
+    border-top-right-radius: 1.5vw;
+    border-bottom-right-radius: 1.5vw;
+    height: 5vh;
     margin-top: 7vh;
-    margin-left: 0px;
+    margin-left: -5vw;
     background-color: white;
     width: 12vw;
 }
 
+.closureHead p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+}
+
 .closureContent{
     display: flex;
+    align-items: center;
     flex-flow: row wrap-reverse;
     width: 90vw;
     height: auto;
@@ -299,6 +314,10 @@
     color: #264653;
     font-size: 1.5vw;
     margin-top: 8vh;
+}
+
+.big{
+    font-weight: bold;
 }
 
 .cTS{
@@ -407,7 +426,7 @@ input{
     width: 25vw;
     height: 6vh;
     background-color: #e6e6e6;
-    border: none;
+    border: 3px solid transparent;
     border-radius: 1vh;
 }
 
@@ -454,6 +473,15 @@ input{
     justify-content: space-around;
 }
 
+.fSB p{
+    font-size: 1.5vw;
+    font-weight: 400;
+}
+
+.usefulLink, .reachUs{
+    font-size: 1.8vw;
+}
+
 i{
     transform: scale(1.5);
     color: #264653;
@@ -465,6 +493,29 @@ i{
     align-items: center;
     height: 5vh;
     margin-bottom: 0px;
+}
+
+.footer p{
+    font-size: 1.2vw;
+}
+
+.cta:active{
+    transition: .1s ease;
+    color: #e9c46a;
+    background-color: #264653;
+    border: none;
+}
+.cta:hover{
+    border: 3px solid #264653;
+}
+
+input:hover{
+    border: 3px solid #264653;
+}
+
+.navigation p:hover{
+    text-decoration: underline;
+    text-decoration-color: #e9c46a;
 }
 
 @media (max-width: 750px) {
@@ -509,7 +560,9 @@ i{
         font-size: 1.5vh;
         width: 30vw;
     }
-
+    .nav2 p{
+        font-size: 1.2vh;
+    }
     .card{
         width: 80vw;
         min-height: 30vh;
@@ -518,13 +571,25 @@ i{
     .cardBox p{
         font-size: 2vh;
     }
-
+    .usefulLink, .reachUs{
+        font-size: 2.6vh;
+    }
     .cardBox{
         flex-direction: column;
     }
     .closureText{
         width: 85vw;
         font-size: 1.5vh;
+    }
+    .closureHead{
+        width: 25vw;
+        height: 4vh;
+    }
+    .closureHead p{
+        font-size: 2.2vh;
+    }
+    .servicesSection p{
+        font-size: 2.2vh;
     }
     .cImgBox{
         width: 70vw;
@@ -550,7 +615,7 @@ i{
     }
     .fSB{
         width: 80vw;
-        justify-content: space-evenly;
+        justify-content: space-between;
         border-top: 1px solid #264653;
         padding: 2%;
     }
